@@ -2,6 +2,7 @@
 <html>
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="bootstrap.css">
 	<script type="text/javascript" src="jquery.js"></script>
 	<script type="text/javascript" src="bootstrap.js"></script>
@@ -10,24 +11,29 @@
 <style type="text/css">
 
 	body{
-		font-family: 'Product Sans';
-		overflow-y: hidden;
+		font-family: 'Raleway';
+	}
+
+	input{
+		background: transparent!important;
+		outline: none!important;
+		border: none!important;
+		box-shadow: none;
+		border-radius: 0 !important;
+		transition: 500ms;
 	}
 	
 	.masthead{
 		width: 100vw;
-		height: 100vh;
-		background: url('bg.jpg') center center no-repeat;
-		font-family: 'Product Sans';
-		background-size: cover;
-		background-attachment: fixed;
+		background: #f2f2f2;
+		font-family: 'Raleway';
 	}
 
 	.login-box{
 		padding: 75px;
-		font-family: 'Product Sans';
-		color: #fff;
-		background: rgb(19, 23, 28, 0.76);
+		font-family: 'Raleway';
+		color: #222;
+		background: rgb(255, 255, 255, 1);
 	}
 
 	.form-control, .form-control:focus{
@@ -41,8 +47,8 @@
 
 	.form-control{
 		transition: 500ms;
-		border-bottom: 2px solid #fff !important;
-		color: #fff!important;
+		border-bottom: 2px solid #222 !important;
+		color: #222!important;
 	}
 
 	.form-control:focus{
@@ -54,16 +60,39 @@
 	.nbar{
 		padding-top: 30px;
 		padding-bottom: 30px;
-		font-family: 'Product Sans';
+		font-family: 'Raleway';
 		background: rgb(19, 23, 28);
+	}
+
+	.nbar-logo{
+		cursor: pointer;
 	}
 
 	.ltext{
 		font-size: 24px;
-		font-family: 'Product Sans';
+		font-family: 'Raleway';
+		color: #00aeef;
 	}
 
 </style>
+<script type="text/javascript">
+	
+	$(function(){
+		setInterval(function(){
+			var y=$(window).height();
+			y+=150;
+			console.log(y)
+			$('.masthead').css({
+				height: ''+y+'px'
+			})
+		}, 50)
+
+		$('.nbar-logo').click(function(){
+			window.location.replace("index.html")
+		})
+	})
+
+</script>
 <body>
 <div class="masthead">
 	<div class="login">
@@ -71,7 +100,7 @@
 			<div class="nbar">
 				<div class="row">
 					<div class="col-md-2 col-md-offset-1 text-center">
-						<img src="logo.png" class="img-responsive">
+						<img src="logo.png" class="img-responsive nbar-logo">
 					</div>
 				</div>
 			</div>
@@ -81,23 +110,22 @@
 					<div class="row">
 						<div class="col-md-8 col-md-offset-2 text-center ltext">Login</div>
 					</div>
-					<form action="/login.php">
+					<br><br>
+					<form action="/register.php" autocomplete="off">
   						<div class="form-group">
     						<label for="email">Email address:</label>
-    							<input type="email" class="form-control" id="email">
+    						<input type="email" class="form-control" id="email" name="Email">
   						</div>
   						<div class="form-group">
     						<label for="pwd">Password:</label>
-    						<input type="password" class="form-control" id="pwd">
-  						</div>
-  						<div class="checkbox">
-    						<label><input type="checkbox"> Remember me</label>
+    						<input type="password" class="form-control" id="pwd" name="PWD">
   						</div>
   						<br>
   						<button type="submit" class="btn btn-default">Submit</button>
 					</form>
 				</div>
 			</div>
+			<br><br><br>
 		</div>
 	</div>
 </div>

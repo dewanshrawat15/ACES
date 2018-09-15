@@ -2,15 +2,16 @@
 <html>
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="bootstrap.css">
 	<script type="text/javascript" src="jquery.js"></script>
 	<script type="text/javascript" src="bootstrap.js"></script>
-	<title>Log In</title>
+	<title>Register</title>
 </head>
 <style type="text/css">
 
 	body{
-		font-family: 'Product Sans';
+		font-family: 'Raleway';
 	}
 
 	input{
@@ -24,17 +25,15 @@
 	
 	.masthead{
 		width: 100vw;
-		background: url('bg.jpg') center center no-repeat;
-		font-family: 'Product Sans';
-		background-size: cover;
-		background-attachment: fixed;
+		background: #f2f2f2;
+		font-family: 'Raleway';
 	}
 
 	.login-box{
 		padding: 75px;
-		font-family: 'Product Sans';
-		color: #fff;
-		background: rgb(19, 23, 28, 0.76);
+		font-family: 'Raleway';
+		color: #222;
+		background: rgb(255, 255, 255, 1);
 	}
 
 	.form-control, .form-control:focus{
@@ -48,8 +47,8 @@
 
 	.form-control{
 		transition: 500ms;
-		border-bottom: 2px solid #fff !important;
-		color: #fff!important;
+		border-bottom: 2px solid #222 !important;
+		color: #222!important;
 	}
 
 	.form-control:focus{
@@ -61,25 +60,37 @@
 	.nbar{
 		padding-top: 30px;
 		padding-bottom: 30px;
-		font-family: 'Product Sans';
+		font-family: 'Raleway';
 		background: rgb(19, 23, 28);
+	}
+
+	.nbar-logo{
+		cursor: pointer;
 	}
 
 	.ltext{
 		font-size: 24px;
-		font-family: 'Product Sans';
+		font-family: 'Raleway';
+		color: #00aeef;
 	}
 
 </style>
 <script type="text/javascript">
 	
 	$(function(){
-		$(document).ready(function(){
-			var y=$('document').height();
+		setInterval(function(){
+			var y=$(window).height();
+			y+=150;
+			console.log(y)
 			$('.masthead').css({
-				height: ''+y+'vh'
+				height: ''+y+'px'
 			})
+		}, 50)
+
+		$('.nbar-logo').click(function(){
+			window.location.replace("index.html")
 		})
+
 	})
 
 </script>
@@ -90,7 +101,7 @@
 			<div class="nbar">
 				<div class="row">
 					<div class="col-md-2 col-md-offset-1 text-center">
-						<img src="logo.png" class="img-responsive">
+						<img src="logo.png" class="img-responsive nbar-logo">
 					</div>
 				</div>
 			</div>
@@ -100,7 +111,8 @@
 					<div class="row">
 						<div class="col-md-8 col-md-offset-2 text-center ltext">Register</div>
 					</div>
-					<form action="/register.php">
+					<br><br>
+					<form action="/register.php" autocomplete="off">
   						<div class="form-group">
     						<label for="name">Name:</label>
     						<input type="text" class="form-control" id="name" name="Name">

@@ -1,16 +1,17 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <title>ACES</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.css">
-  <script src="jquery.js"></script>
-  <script src="bootstrap.js"></script>
-</head>
-<body>
-<style type="text/css">
+<?php 
+
+ ?>
+ <!DOCTYPE html>
+ <html>
+ <head>
+ 	<link rel="stylesheet" type="text/css" href="bootstrap.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.css">
+ 	<title>Members</title>
+ 	<script type="text/javascript" src="jquery.js"></script>
+ 	<script type="text/javascript" src="bootstrap.js"></script>
+ </head>
+ <style type="text/css">
 	
 	.navbar{
     	padding-top: 24px!important;
@@ -27,12 +28,12 @@
       margin: auto;
   }
 
-  .about{
+  .members{
     padding: 125px 0 125px 0;
     background: #fff;
   }
 
-  .about-title{
+  .members-title{
     font-size: 24px;
     font-family: 'Raleway', sans-serif;
   }
@@ -80,6 +81,7 @@
 }
 
 </style>
+ <body>
 <nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <div class="navbar-header">
@@ -190,17 +192,12 @@
     </a>
   </div>
 </div>
-<br><br><br>
-<div class="about">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-4 text-center about-title col-md-offset-4">What Is ACES..??</div>
-    </div>
-    <br><br>
-    <div class="row">
-      <p class="col-md-6 text-center about-text col-md-offset-3">Association of Computer Engineering Students (ACES) is the student body of Computer Engineering Department, BV(DU)COE Pune which provides a platform for the holistic development of a Computer Engineer. Here we not only learn the technicalities of a particular thing but also embrace its social and cultural aspects for the greater good of the society. Apart from working in the department on various things like organising technical events and workshops we also work towards a better society by organising social events and workshops.</p>
-    </div>
-  </div>
+<div class="members">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-4 col-md-offset-4 text-center members-title">Members</div>
+		</div>
+	</div>
 </div>
-</body>
-</html>
+ </body>
+ </html>

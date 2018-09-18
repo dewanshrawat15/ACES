@@ -79,7 +79,8 @@
 	
 	$(function(){
 		setInterval(function(){
-			var y=$('body').height();
+			var y=$(window).height();
+			y+=150;
 			console.log(y)
 			$('.masthead').css({
 				height: ''+y+'px'
